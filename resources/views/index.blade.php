@@ -25,7 +25,7 @@
         <div>
             <table class="table table-bordered">
                 <tr>
-                    <th>Course_Id</th>
+                    <th>id</th>
                     <th>Course_Name</th>
                     <th>Edit Record</th>
                     <th>Delete Record</th>
@@ -34,7 +34,7 @@
                 @foreach ($courses as $course )
                 <tr>
                     <td>
-                        {{$course->course_id}}
+                        {{$course->id}}
                     </td>
 
                     <td>
@@ -42,13 +42,13 @@
                     </td>
 
                     <td>
-                        <a href="{{route('courses.edit',$course->course_id)}}">
+                        <a href="{{route('courses.edit',$course->id)}}">
                             <button class="btn btn-primary">Edit</button>
                         </a>
                     </td>
 
                     <td>
-                        <form action="{{route('courses.destroy',$course->course_id)}}">
+                        <form action="{{route('courses.destroy',$course->id)}}">
                             <button class="btn btn-danger">Delete</button>
                         </form>
                     </td>

@@ -37,7 +37,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {    $course=Course::create([
-             'course_id'=>$request->input('course_id'),
+             'id'=>$request->input('id'),
              'course_name'=>$request->input('course_name')
              ]);
         //$course=Course::create($request->all());
@@ -76,9 +76,9 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $course=Course::where('course_id',$id)->update(
+        $course=Course::where('id',$id)->update(
             [
-                'course_id'=>$request->input('course_id'),
+                'id'=>$request->input('id'),
                 'course_name'=>$request->input('course_name'),
 
             ]);
